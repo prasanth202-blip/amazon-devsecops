@@ -58,7 +58,7 @@ pipeline {
                     --scan ./ 
                     --disableYarnAudit 
                     --disableNodeAudit 
-                
+                    --update -n
                    ''',
                 odcInstallation: 'dp-check'
 

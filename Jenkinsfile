@@ -39,7 +39,7 @@ pipeline {
                 script {
                     timeout(time: 3, unit: 'MINUTES') {
                   
-                    waitForQualityGate abortPipeline: false, credentialsId: 'sonar-token'
+                    waitForQualityGate abortPipeline: false, credentialsId: 'Sonar-token'
                 }
             }
         }

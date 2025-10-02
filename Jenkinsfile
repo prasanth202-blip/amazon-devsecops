@@ -69,7 +69,7 @@ pipeline {
 
         stage("Trivy File Scan") {
             steps {
-                sh "trivy fs . > trivyfs.txt"
+                sh "trivy fs . > trivy.txt"
             }
         }
 
@@ -153,7 +153,7 @@ pipeline {
                 to: 'sornapudiprasanth@gmail.com',
                 from: 'sornapudiprasanth@gmail.com',
                 mimeType: 'text/html',
-                attachmentsPattern: 'trivyfs.txt,trivy-image.json,trivy-image.txt,dependency-check-report.xml'
+                attachmentsPattern: 'trivy.txt,trivy-image.json,trivy-image.txt,dependency-check-report.xml'
                     )
         }
     }

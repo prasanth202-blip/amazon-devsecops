@@ -16,7 +16,7 @@ pipeline {
         }
         stage ("Git Checkout") {
             steps {
-                git 'https://github.com/prasanth202-blip/amazon-devsecops.git'
+                git branch: 'main', url:'https://github.com/prasanth202-blip/amazon-devsecops.git'
             }
         }
         stage("Sonarqube Analysis"){
